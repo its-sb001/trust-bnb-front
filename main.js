@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     // Default amount
-    amountInput.value = "1";
+    amountInput.value = "0";
     approxUsd.textContent = "≈ $1.00";
 
     function updateApproxUsd() {
